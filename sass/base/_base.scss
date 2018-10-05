@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before{
+
+
+	margin: 0 auto;
+	padding: 0rem;
+	box-sizing: border-box;
+
+}
+
+html{
+
+	font-size: 62.5%;
+	font-weight: 400%;
+
+@include respond(big-desktop){
+
+		font-size: 80%;
+	}
+
+
+@include respond(tab-land){
+
+		font-size: 55%;
+	}
+
+		@include respond(tab-port){
+
+		font-size:50%;
+	} 
+	 
+}
+
+
+
+
+

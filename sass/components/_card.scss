@@ -1,0 +1,314 @@
+
+.card {
+
+
+
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    padding: 15rem 15rem;
+
+  
+    @include respond(tab-port){
+          margin-bottom: 24rem;
+        }
+      
+    &_side {
+
+        height: 52rem;
+        transition: all 1s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+
+
+            background-color: $color-white;
+        }
+
+        &--back {
+
+            transform: rotateY(-180deg);
+            &--1{
+                background-image:linear-gradient(to right bottom, $color-secondary-light,$color-secondary-dark);
+            }
+            &--2{
+                background-image:linear-gradient(to right bottom, $color-medium-green,$color-dark-green);
+            }
+            &--3{
+                background-image:linear-gradient(to right bottom, $color-light-blue,$color-dark-blue);
+            }
+            
+
+
+        }
+
+
+    }
+
+
+    &:hover &_side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &_side--back {
+        transform: rotateY(0deg);
+    }
+
+    .card-image{
+        position: relative;
+       background-size:cover;
+       height: 23rem;
+       background-blend-mode: screen;
+       &--1{
+        clip-path:polygon(0 0, 100% 0,100% 85%,0 100%);
+          -webkit-clip-path:polygon(0 0, 100% 0,100% 85%,0 100%);
+
+
+           background-image: linear-gradient(to right bottom, $color-secondary-light,$color-secondary-dark), url(../img/nat-5-min.jpg);
+
+           @media (min-resolution:192dpi) and (min-width:37.5rem),(min-width: 125rem){
+                       background-image: linear-gradient(to right bottom, $color-secondary-light,$color-secondary-dark), url(../img/nat-5.jpg);
+
+           }
+       }
+          &--2{
+        clip-path:polygon(0 0, 100% 0,100% 85%,0 100%);
+          -webkit-clip-path:polygon(0 0, 100% 0,100% 85%,0 100%); 
+
+            
+            background-image: linear-gradient(to right bottom, $color-medium-green, $color-dark-green), url(../img/nat-6-min.jpg);
+            
+              @media (min-resolution:192dpi) and (min-width:37.5rem),(min-width: 125rem){
+                       background-image: linear-gradient(to right bottom, $color-medium-green,$color-dark-green), url(../img/nat-6.jpg);
+
+           }
+       }
+
+         &--3{
+        clip-path:polygon(0 0, 100% 0,100% 85%,0 100%);
+          -webkit-clip-path:polygon(0 0, 100% 0,100% 85%,0 100%);
+
+
+           background-image: linear-gradient(to right bottom, $color-light-blue,  $color-dark-blue), url(../img/nat-7-min.jpg);
+           
+
+             @media (min-resolution:192dpi) and (min-width:37.5rem),(min-width: 125rem){
+                       background-image: linear-gradient(to right bottom, $color-light-blue,$color-dark-blue), url(../img/nat-7.jpg);
+
+           }
+
+         }
+
+   }
+
+   &_heading{
+    font-size: 2.8rem;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+   }
+
+ &_heading-span{
+    box-decoration-break: clone;
+padding:1rem 1.5rem;
+
+    &--1{
+            background-image: linear-gradient(to right bottom,rgba( $color-secondary-light,.85), rgba( $color-secondary-dark,.85));
+
+    }
+     &--2{
+            background-image: linear-gradient(to right bottom,rgba( $color-medium-green,.85), rgba( $color-dark-green,.85));
+
+    }
+      &--3{
+            background-image: linear-gradient(to right bottom,rgba( $color-light-blue,.85), rgba( $color-dark-blue,.85));
+
+    }
+   }
+
+
+   &_details{
+
+
+    ul{
+        margin-top: 2rem;
+    list-style: none;
+    width: 80%;
+
+    }
+    li{
+        font-size: 1.5rem;
+        color: $color-text;
+        text-align: center;
+        padding: 1rem;
+
+       &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+  
+    }
+
+}
+
+&_cta{
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+
+}
+
+
+&_price-box{
+text-align: center;
+color: $color-white;
+margin-bottom: 8rem;
+
+}
+
+&_price-value{
+font-size: 6rem;
+      font-weight: 100;
+}
+
+
+&_price-only{
+      font-size: 1.9rem;
+      font-weight: 200;
+}
+
+.btn_card{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-45%,-100%);
+    font-size: 1.4rem;
+}
+
+
+
+}
+
+
+@media only screen and (max-width:56.25rem),
+only screen and(hover:none) {
+
+
+
+
+   .card {
+
+margin-bottom: 0rem;
+padding: 0rem 0rem;
+height: 90%;
+
+ 
+ border-radius: 3px;
+   
+
+ 
+    &_side {
+         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        height: auto;
+        position: relative;
+        width: 100%;
+      
+      
+    
+
+        &--back {
+
+        
+           position: relative;
+            transform: rotateY(0deg) translateY(-5rem);
+       padding-bottom: 8rem;
+ -webkit-clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
+
+        }
+
+
+&--front {
+  border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
+  padding-bottom: 4rem;
+}
+
+
+    }
+
+
+
+
+    &:hover &_side--front {
+        transform: rotateY(0deg);
+    }
+
+      &:hover &_side--back {
+        transform:translateY(-5rem);
+    }
+
+
+   
+
+&_cta{
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0) ;
+    width: 100%;
+
+}
+
+
+&_price-box{
+
+
+margin-bottom: 0rem;
+
+}
+
+&_price-value{
+font-size: 5rem;
+      font-weight: 100;
+        margin-top: 2rem;
+}
+
+
+&_price-only{
+  margin-top: 5rem;
+      font-size: 1.9rem;
+      font-weight: 200;
+}
+
+.btn_card{
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-45%,10%);
+    font-size: 1.4rem;
+}
+
+
+
+}
+
+
+
+}
+

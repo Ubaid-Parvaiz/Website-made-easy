@@ -1,0 +1,134 @@
+.section-story{
+
+	padding-bottom: 10rem;
+	position: relative;
+	
+}
+
+
+
+.story{
+	width: 75%;
+	margin: 0 auto;
+	background-color: rgba($color-white,.50);
+	padding: 10rem;
+	z-index: 100;
+	font-size: $default-font-size;
+clip-path: polygon(13% 9%, 100% 8%, 91% 85%, 0 86%);
+-webkit-clip-path: polygon(13% 9%, 100% 8%, 91% 85%, 0 86%);
+box-shadow: 3rem 3rem .5rem rgba(0,0,0,.10);
+
+
+
+@include respond (tab-port){
+	width:100%;
+	padding:7rem; 
+}
+@include respond (phone){
+font-size: 1.6rem;
+padding:1.5rem;
+box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+-webkit-clip-path: none;
+clip-path: none;
+}
+
+	&_shape{
+		
+		padding: 3rem;
+	 width: 18rem;
+	 height: 15rem;
+	 float: left;
+      border-radius: 50%;
+	 transform: translateX(-2rem);
+	 overflow: hidden;
+
+
+	 	 @include respond(tab-port){
+	 	padding: 2.5rem;
+	 	width: 16rem;
+	 	height: 13 rem;
+	 }
+
+
+
+	 @supports (shape-outside:circle(50% at 50% 50%)) or (-webkit-shape-outside:circle(50% at 50% 50%)){
+ -webkit-shape-outside:circle(50% at 50% 50%);
+shape-outside:circle(50% at 50% 50%);
+border-radius: none;
+clip-path:circle(45% at 50% 50%);
+ -webkit-clip-path: circle(45% at 50% 50%);
+	
+	 }
+
+	  @include respond(phone){
+	 	padding: 2rem;
+	 	width: 15rem;
+	 	height: 12rem;
+	 }
+
+	}
+&_img{
+position: relative;
+width: 120%;
+position: absolute;
+right:1rem;
+left: 0rem;
+top: -1rem;
+height: 17rem;
+transform: translateX(-10%) scale(1.4);
+transition: all .5s;
+
+
+}
+& p{
+	color: $color-text;
+}
+
+
+&_caption{
+	position: absolute;
+	color: $color-white;
+	text-transform: uppercase;
+	top: 50%;
+	left: 50%;
+	transform: translate(-30%, 20%);
+	opacity: 0;
+	transition: all .5s;
+
+
+}
+
+&:hover &_caption{
+
+	transform: translate(-30%, -50%);
+	opacity: 1;
+
+}
+
+&:hover &_img{
+
+
+
+transform: translateX(-10%) scale(1);
+filter:blur(3px) brightness(70%);
+
+}
+
+
+@include respond(phone){
+ 
+
+ 	 &_media{
+ 	 	padding: 0.1px;
+ 	 	display: inline-block;
+ 	 	padding-top: 6rem;
+ 	 	text-align: center;
+ 	 	transform: translateX(15rem);
+ 	 }
+
+ 
+}
+
+
+}
+

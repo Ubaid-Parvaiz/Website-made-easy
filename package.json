@@ -1,0 +1,20 @@
+{
+  "name": "after",
+  "version": "1.0.0",
+  "description": "Natours",
+  "main": "ubaid.js",
+  "dependencies": {
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.3"
+  },
+  "scripts": {
+    "compile:sass":"node-sass sass/Pages/main.scss css/style.css -w",
+    "prefix:css": "postcss --use autoprefixer -b 'Last 10 versions' css/style.css -o css/style.prefix.css"
+   
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "author": "Ubaid",
+  "license": "ISC"
+}

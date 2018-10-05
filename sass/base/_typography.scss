@@ -1,0 +1,154 @@
+
+
+
+body{
+
+
+	font-family: 'Lato','san-serif';
+	padding: 3rem;
+	line-height: 1.7;
+
+
+
+
+@include respond(tab-port){
+
+      padding:0;
+    }
+
+
+
+}
+
+
+
+.Heading-Primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    
+        /*
+        animation-delay: 3s;
+        animation-iteration-count: 3;
+        */
+          
+
+          @include respond (phone){
+            
+              font-size: 4rem;
+               letter-spacing: 1rem;
+
+          }
+
+
+    }
+    
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight 1s ease-out;
+
+             @include respond (tab-port){
+            
+              font-size: 1.6rem;
+               letter-spacing: .3rem;
+
+          }
+
+
+          @include respond (phone){
+            
+              font-size: 1.6rem;
+               letter-spacing: .3rem;
+
+          }
+
+          @media only screen and(max-width:25rem){
+            font-size: 1.3rem;
+          }
+    }
+}
+
+.heading-secondary {
+    font-size: 3.5rem;
+    font-weight: 700px;
+    display: inline-block;
+    background-image: linear-gradient(to right,$color-light,$color-dark-green);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    transition: all .2s; 
+   
+@include respond(tab-port){
+
+
+      font-size:2.5rem;
+}
+
+
+@include respond(phone){
+
+
+      font-size: 1.9rem;
+}
+
+
+    &:hover {
+    transform:skewX(15deg) skewY(2deg) scale(1.1);
+    text-shadow: 0rem 1rem 3rem rgba(0,0,0,.3)
+    }
+
+    @supports (background-clip: text) or (-webkit-background-clip: text){
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image:linear-gradient(to right,$color-heading-secondary-start,$color-heading-secondary-end);
+  color: transparent;
+
+
+}
+}
+
+
+.u-text-center{
+
+text-align: center;
+}
+
+.heading-teriatery{
+
+color: $color-text;
+font-size:$default-font-size;
+text-transform: uppercase;
+
+
+}
+
+
+.paragraph{
+    color: $color-text;
+font-size: $default-font-size;
+
+}
+
+.margin-bottom-medium{
+    margin-bottom: $margin-bottom-medium ;
+}
+
+.margin-bottom-small{
+    margin-bottom:$margin-bottom-small;
+}

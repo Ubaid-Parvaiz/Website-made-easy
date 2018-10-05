@@ -1,0 +1,123 @@
+.section-about{
+	
+	background-color:$color-grey-light-1;
+	padding: 25rem 0;
+	margin-top: -25vh;
+
+
+	@include respond(tab-port){
+		padding-top: 14rem 0;
+
+
+	}
+
+
+	@include respond(phone){
+		padding: 15rem 0;
+	}
+	
+	@include respond(phone){
+
+
+		& .heading-secondary{
+			margin-top: 2rem;
+			font-size: 1.3rem;
+		}
+	}
+
+	
+	
+}
+
+.section-features
+{
+	padding: 20rem 0;
+	background-size: cover;
+	background-image: linear-gradient(to right bottom,rgba($color-light,0.8),
+
+
+
+		rgba($color-dark-green,0.8)) ,
+
+	url(../img/nat-4-min.jpg);
+	transform: skewY(-7deg);
+	margin-top: -10rem;
+
+
+
+
+
+	@include respond(tab-port){
+		padding: 10rem 0;
+	}
+
+	& > *{
+		transform: skewY(7deg);
+	}
+
+	@media (min-resolution:192dpi) and (min-width: 37.5rem),
+	(min-width:125rem){ 
+
+		background-image: linear-gradient(to right bottom,rgba($color-light,0.8),
+			rgba($color-dark-green,0.8)) ,
+		url(../img/nat-4.jpg);
+
+	}
+	
+}
+
+
+.section-tours{
+	margin-top: -10rem;
+	background-color:$color-grey-light-1;
+	padding: 25rem 0 50rem 0rem;
+	
+
+	@include respond(tab-port){
+		padding: 20rem 0 7rem 0rem;
+	}
+	
+}
+
+.section-book{
+	background-image: linear-gradient(to right,$color-footer-gradient-end,$color-dark-green);
+	padding: 15rem 0;	
+
+
+	@include respond(tab-port){
+		padding: 10rem 0;
+	}
+
+
+	
+
+}
+
+.book{
+	background-image:linear-gradient(105deg,rgba($color-white,.80) 50%,transparent 50%), url(../img/nat-10-min.jpg) ;
+	background-size: cover;
+	height: 50rem;
+	width:90%;
+	box-shadow: 5px 5px 25px rgba(0,0,0,.30);
+
+
+
+	@include respond(tab-port){
+
+		background-image:linear-gradient(to bottom,rgba($color-white,.80),rgba($color-white,.80)), url(../img/nat-10.jpg) ;
+		background-size: cover;
+		height: 100% ;
+		width:100%;
+		padding-bottom: 3rem;
+	}
+
+
+	@media (min-width: 37.5rem) and (min-resolution:192dpi),(min-width: 125rem){
+		background-image:linear-gradient(105deg,rgba($color-white,.80) 50%,transparent 50%), url(../img/nat-10.jpg);
+
+	}
+}
+
+.text-align-left{
+	transform: translateX(5rem)translateY(5rem);
+}

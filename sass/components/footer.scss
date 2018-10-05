@@ -1,0 +1,91 @@
+.footer{
+	background-color:$color-footer;
+	padding: 15rem 0rem;
+	color: $color-white;
+
+	@include respond(tab-port){
+
+		padding: 7rem 0rem;
+	}
+
+
+&_logo-box{
+	text-align: center;
+	margin-bottom: 8rem;
+	transform: translateX(-2rem);
+
+
+
+
+
+}
+
+&_navigation{
+	display: inline-block;
+	font-size:1.6rem;
+	border-top: 1px solid $color-text;
+
+	 
+
+}
+
+
+.footer_list{
+	padding-top: 1rem;
+	list-style: none;
+
+
+}
+
+
+.footer_item{
+display: inline-block;
+&:not(:last-child){
+	padding-right: 2rem;
+}
+
+}
+
+.footer_link{
+	text-decoration: none;
+	color: inherit;
+	transition: all .2s;
+	
+
+	&:hover{
+		display:inline-block;
+		color:$color-dark-green;
+		transform: rotate(5deg) scale(1.2);
+		box-shadow: 0rem 1rem 2rem rgba(0,0,0,1);
+		
+	}
+
+
+	&:active{
+		color:$color-dark-green;
+		transform: scale(1);
+		box-shadow: 0rem 1rem 1rem rgba(0,0,0,1);
+		
+	}
+}
+
+
+
+&_copyright{
+color: inherit;
+font-size: 1.6rem;
+border-top: 1px solid $color-text;
+padding-top: 1rem;
+letter-spacing: 1px;
+
+}
+
+&_logo{
+	height: 15rem;
+	width: 18rem;
+}
+
+}
+
+
+

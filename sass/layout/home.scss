@@ -1,0 +1,83 @@
+.header{
+	position: relative;
+	height: 85vh;
+	background-image: linear-gradient(to right bottom,rgba($color-light,0.8),
+
+		rgba($color-dark-green,0.8)) ,
+
+	url(../img/hero-min.jpg);
+
+	background-position: top;
+	background-size: cover;
+	
+
+
+@include respond(phone){
+-webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+
+}
+
+@media only screen and (min-resolution:192dpi) and (min-width: 37.5rem),
+only screen and (-webkit-min-device-pixel-ratio:2) and (min-width: 37.5rem),
+only screen and (min-width:125rem) {
+
+background-image: linear-gradient(to right bottom,rgba($color-light,0.8),
+rgba($color-dark-green,0.8)) ,url(../img/hero.jpg);
+
+}
+
+@supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)){
+clip-path: polygon(100% 0, 100% 78%, 0 95%, 0 0);
+-webkit-clip-path: polygon(100% 0, 100% 78%, 0 95%, 0 0);
+height: 95vh;
+}
+
+
+@media (max-width:25rem){
+clip-path: polygon(100% 0, 100% 78%, 0 95%, 0 0);
+-webkit-clip-path: polygon(100% 0, 100% 78%, 0 95%, 0 0);	
+}
+
+
+	&_logo-box{
+
+	position: absolute;
+	
+	top: 3rem;
+	left:3rem;
+
+}
+
+&_logo{
+
+
+height: 3rem;
+	}
+
+
+
+
+&_text-box{
+	position: absolute;
+	top:35%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+
+           
+
+}
+
+
+
+
+
+
+
+::selection{
+	background-color: darkgreen;
+	color: #fff;
+}

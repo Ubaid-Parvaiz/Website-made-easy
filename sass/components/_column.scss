@@ -1,0 +1,91 @@
+
+
+
+.row{
+	max-width: 114rem;
+	margin:0 auto;
+	
+@include respond(tab-port){
+
+	max-width: 50rem;
+}
+
+@include respond(phone){
+
+	padding: 3rem;
+}
+
+
+&:not(:last-child){
+
+
+	margin-bottom: 4rem;
+
+
+
+}
+@include clearfix;
+
+
+[class^="col"]{
+	float: left;
+
+
+&:not(:last-child){
+	margin-right:$space-horizantal;
+
+	@include respond(tab-port){
+	margin-right: 0;
+	margin-bottom:  $space-horizantal-small;
+}
+
+}
+
+@include respond(tab-port){
+	width: 100% !important;
+}
+
+}
+
+.col-1-of-2{
+
+	width: calc( (100% - #{$space-horizantal}) / 2);
+	
+
+
+
+}
+.col-1-of-3{
+
+	width: calc((100% - 2 * #{$space-horizantal}) / 3);
+	
+	
+
+}
+
+
+
+.col-2-of-3{
+width: calc(2 * ((100% - 2 * #{$space-horizantal}) / 3 ) + #{$space-horizantal});
+
+}
+
+.col-1-of-4{
+width: calc((100% - 3 * #{$space-horizantal}) / 4 );
+
+
+
+}
+.col-2-of-4{
+width: calc(2 *((100% - 3 * #{$space-horizantal}) / 4 ) + #{$space-horizantal});
+
+
+
+}
+
+.col-3-of-4{
+
+	width: calc(3 *((100% - 3 * #{$space-horizantal} ) / 4) + 2 * #{$space-horizantal});
+}
+
+}
